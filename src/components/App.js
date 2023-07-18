@@ -6,12 +6,10 @@ import Modal from "./Modal";
 const App = () => {
   const [show, setshow] = useState(false)
   return (
-    <div className="model-overlay">
+    <div >
       {/* Do not remove the main div */}
       <button onClick={()=>setshow(true)}>Show Modal</button>
-      {
-        show && (<Modal setshow={setshow}/>)
-      }
+      {show && (<Modal setshow={setshow}/>)}
 
     </div>
   )
