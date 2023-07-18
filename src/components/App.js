@@ -14,7 +14,7 @@ function App() {
   };
  
   return (
-    <div>
+    <div onBlur={()=>setShowModal(false)}>
       <button onClick={handleShowModal}>Show Modal</button>
       <Modal show={showModal} onClose={handleCloseModal}>
         <p>This is the content of the modal.</p>
