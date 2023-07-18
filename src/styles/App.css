@@ -1,15 +1,22 @@
-button {
-    background-color: brown;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: white;
-
+.App {
+    font-family: sans-serif;
+    text-align: center;
 }
-.model-overlay{
-    padding: 20px;
-    border: 2px solid grey;
+
+.modal-overlay {
+    border: 3px solid grey;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
     background-color: lightblue;
+}
+
+button {
+    border: 2px solid indianred;
+    border-radius: 5px;
+    padding: 0.4em 0.6em;
+    background-color: indianred;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
 }

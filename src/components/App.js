@@ -1,18 +1,26 @@
-
 import React, { useState } from "react";
-import './../styles/App.css';
 import Modal from "./Modal";
-
-const App = () => {
-  const [show, setshow] = useState(false)
+import './../styles/App.css';
+ 
+function App() {
+  const [showModal, setShowModal] = useState(false);
+ 
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+ 
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+ 
   return (
-    <div >
-      {/* Do not remove the main div */}
-      <button onClick={()=>setshow(true)}>Show Modal</button>
-      {show && (<Modal setshow={setshow}/>)}
-
+    <div>
+      <button onClick={handleShowModal}>Show Modal</button>
+      <Modal show={showModal} onClose={handleCloseModal}>
+        <p>This is the content of the modal.</p>
+      </Modal>
     </div>
-  )
+  );
 }
-
-export default App
+ 
+export default App;
